@@ -12,16 +12,16 @@ git clone [git地址]
 git checkout [分支]
 ```
 
-* 例如: template-admin 模板分支
+* 例如
 
 ```shell
 # 1.
-git clone --branch template-admin git@github.com:yydswanghai/code-730-projects-for-vue3.git
+git clone --branch vue3 git@github.com:yydswanghai/code730-projects.git
 ```
 
 ```shell
 # 2.
-git clone git@github.com:yydswanghai/code-730-projects-for-vue3.git
+git clone git@github.com:yydswanghai/code730-projects.git
 
-git checkout template-admin
+git checkout vue3
 ```
