@@ -2,8 +2,6 @@
 
 数据库：mysql
 
-连接数据库目录: server/models/db.ts
-
 Node-ORM：sequelize	https://github.com/demopark/sequelize-docs-Zh-CN/tree/v6
 
 node-web应用框架：koa	https://github.com/koajs/koa  中文网 https://koa.bootcss.com/
