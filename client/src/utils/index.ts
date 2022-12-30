@@ -40,3 +40,26 @@ export function lighten(color: string, amount: number) {
     amount = Math.trunc((255 * amount) / 100);
     return `#${addLight(color.substring(0, 2), amount)}${addLight(color.substring(2, 4),amount)}${addLight(color.substring(4, 6), amount)}`
 }
+
+/* 自定义防抖ref */
+/**
+ * 用法 const inputValue = debounceRef('')
+ */
+export function debounceRef<T extends any>(value: T, duration = 300) {
+    let timer: any
+    return customRef((track: () => void, trigger: () => void) => {
+        return {
+            get() {
+                track()
+                return value
+            },
+            set(newVal: T) {
+                clearTimeout(timer)
+                timer = setTimeout(() => {
+                    value = newVal
+                    trigger()
+                }, duration);
+            }
+        }
+    })
+}
